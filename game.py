@@ -1,11 +1,11 @@
 # Importing Modules required for a Game 
 import pygame, sys, time, random
 # Snake Speed
-speed = 13
+speed = 12
 
 #Frame Sizes
 
-frame_size_x = 1000
+frame_size_x = 1050
 frame_size_y= 920
 
 #Error Check conditions
@@ -128,6 +128,6 @@ while True:
         if head_pos[0] == block[0] and head_pos[1] == block[1]:
             init_vars()
 # Game Update
-    show_score(1,white, 'consolas', 20)
+    show_score(1,white, 'consolas', 35)
     pygame.display.update()
     fps_controller.tick(speed)
