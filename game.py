@@ -12,7 +12,7 @@ frame_size_y= 920
 check_errors = pygame.init()
 
 if(check_errors[1] > 0):
-    print("Error " + check_errors[1])
+    print("Error ",check_errors)
 else:
     print("Game Succesfully initialized")
     
@@ -32,7 +32,7 @@ blue = pygame.Color(0,0,255)
 fps_controller = pygame.time.Clock()
 
 # Snake Size
-square_size = 60
+square_size = 30
 
 def init_vars():
     global head_pos, snake_body, food_pos, food_spawn, score, direction
@@ -128,6 +128,6 @@ while True:
         if head_pos[0] == block[0] and head_pos[1] == block[1]:
             init_vars()
 # Game Update
-    show_score(1,white, 'consolas', 35)
+    show_score(1,white, 'consolas', 40)
     pygame.display.update()
     fps_controller.tick(speed)
